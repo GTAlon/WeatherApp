@@ -3,6 +3,7 @@ package compte;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import compte.alerte.IAlerte;
 import jourHoraire.JourHoraire;
 import lieu.Lieu;
 
@@ -11,7 +12,7 @@ public class Preference {
 	
 	private Lieu lieu;
 	private JourHoraire jourHoraire;
-	Collection<Alerte> alertes = new ArrayList<>();
+	Collection<IAlerte> alertes = new ArrayList<>();
 	
 	public Preference(Lieu lieu, JourHoraire jourHoraire) {
 		super();
@@ -35,7 +36,7 @@ public class Preference {
 		this.jourHoraire = jourHoraire;
 	}
 	
-	public void addAlerte(Alerte alerte) {
+	public void addAlerte(IAlerte alerte) {
 		alertes.add(alerte);
 	}
 	
