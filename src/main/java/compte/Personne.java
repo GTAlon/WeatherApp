@@ -3,14 +3,15 @@ package compte;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
+import java.util.Optional;
 
 public class Personne {
 
 	
 	String nom;
 	String prenom;
-	Date dateDeNaissance;
-	Collection<Preference> preferences = new ArrayList<Preference>();
+	private Optional<Date> dateDeNaissance;
+	private Collection<Preference> preferences = new ArrayList<Preference>();
 	
 	
 	public Personne(String nom, String prenom) {
@@ -27,12 +28,21 @@ public class Personne {
 		return prenom;
 	}
 
-	public Date getDateDeNaissance() {
+	public Optional<Date> getDateDeNaissance() {
 		return dateDeNaissance;
 	}
 
 
-	public void setDateDeNaissance(Date dateDeNaissance) {
+	public void setDateDeNaissance(Optional<Date> dateDeNaissance) {
 		this.dateDeNaissance = dateDeNaissance;
+	}
+
+
+	public Collection<Preference> getPreferences() {
+		return preferences;
+	}
+
+	public void addPreference(Preference pref) {
+		this.preferences.add(pref);
 	}
 }
