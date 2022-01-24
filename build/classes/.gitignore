@@ -1,1 +1,12 @@
+<<<<<<< HEAD
 /compte/
+=======
+/UOM/
+/api/
+/compte/
+/datatypes/
+/jourHoraire/
+/lieu/
+/stereotypes/
+/temps/
+>>>>>>> branch 'dev' of https://github.com/GTAlon/WeatherApp.git
