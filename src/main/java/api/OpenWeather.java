@@ -21,8 +21,9 @@ public class OpenWeather {
 	    return sb.toString();
 	  }
 	
-	public static JSONObject readJson() throws IOException,JSONException {
-		URL url = new URL("https://api.openweathermap.org/data/2.5/weather?q=Paris&appid=c2b3e98a47c3c5a55a84becc1cd21525&units=metric");
+	public static JSONObject callWeather(String ville) throws IOException,JSONException {
+		URL url = new URL("https://api.openweathermap.org/data/2.5/weather?q="
+				+ ville + "&appid=4f99ed3b12e587d1188dfe31b698a5a9&units=metric");
 
 		 InputStream is = url.openStream();
 		    try {
@@ -38,9 +39,12 @@ public class OpenWeather {
 	}
 	
 	public static void main(String[] args) throws IOException, JSONException {
-	    JSONObject json = readJson();
+	    JSONObject json = callWeather("Bruxelles");
 	    System.out.println(json.toString());
-	    System.out.println(json.get("main"));
+	    //System.out.println(json.get("main"));
+	    float temp = json.getJSONObject("main").getFloat("temp");
 	    System.out.println(json.getJSONObject("main").getFloat("temp"));
+	 
+
 	  }
 }

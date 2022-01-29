@@ -8,8 +8,8 @@ import java.util.Optional;
 public class Personne {
 
 	
-	String nom;
-	String prenom;
+	private String nom;
+	private String prenom;
 	private Optional<Date> dateDeNaissance;
 	private Collection<Preference> preferences = new ArrayList<Preference>();
 	
