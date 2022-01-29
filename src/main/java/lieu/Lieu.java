@@ -13,7 +13,7 @@ public class Lieu {
 		this.pays = pays;
 	}
 
-	public Ville getVile() {
+	public Ville getVille() {
 		return vile;
 	}
 

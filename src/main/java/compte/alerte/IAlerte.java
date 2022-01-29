@@ -1,7 +1,8 @@
 package compte.alerte;
 
-public interface IAlerte {
+import lieu.Lieu;
 
+public interface IAlerte {
 	
 	Object getValue();
 }
